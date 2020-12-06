@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\IT_AcademyHomework.Common.Validation\IT_AcademyHomework.Common.Validation.csproj" />
+  </ItemGroup>
+
 </Project>

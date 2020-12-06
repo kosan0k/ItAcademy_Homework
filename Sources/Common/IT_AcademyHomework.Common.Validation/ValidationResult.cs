@@ -7,12 +7,18 @@ namespace IT_AcademyHomework.Common.Validation
     {
         public bool IsValid { get; }
 
-        public IReadOnlyCollection<string> Messages { get; }
+        public IReadOnlyCollection<string> ErrorMessages { get; }
 
-        public ValidationResult(bool isValid, IList<string> messages) 
+        public ValidationResult(bool isValid) 
         {
             IsValid = isValid;
-            Messages = new ReadOnlyCollection<string>(messages);
+            ErrorMessages = new ReadOnlyCollection<string>(new List<string>());
+        }
+
+        public ValidationResult(bool isValid ,IList<string> errorMessages) 
+        {
+            IsValid = isValid;
+            ErrorMessages = new ReadOnlyCollection<string>(errorMessages);
         }
     }
 }
