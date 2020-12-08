@@ -6,16 +6,16 @@ using System.Text;
 
 namespace Lesson4_Homework.Controllers
 {
-    public class ValueConverterController : Controller
+    public class TemperatureConverterController : Controller
     {
         private readonly IValidator<double> _validator;
 
-        public ValueConverterController(IValidator<double> validator) 
+        public TemperatureConverterController(IValidator<double> validator) 
         {
             _validator = validator ?? throw new ArgumentNullException(nameof(validator));
         }
 
-        public IActionResult ConvertCelsiumToFarinheits(double celsiumTemperature)
+        public IActionResult CelsiumToFahrenheits(double celsiumTemperature)
         {
             IActionResult result;
 
