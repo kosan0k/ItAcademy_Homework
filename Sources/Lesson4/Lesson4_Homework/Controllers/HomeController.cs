@@ -1,4 +1,5 @@
 ﻿using Lesson4_Homework.Models;
+using Lesson4_Homework.Other;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -9,6 +10,8 @@ namespace Lesson4_Homework.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private const string _itAcademyWebsiteUri = "https://www.it-academy.by/";
+
         public HomeController(ILogger<HomeController> logger)
         {            
             _logger = logger;
@@ -17,6 +20,16 @@ namespace Lesson4_Homework.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult ItAcademyRedirect() 
+        {
+            return Redirect(_itAcademyWebsiteUri);
+        }
+
+        public IActionResult CustomResult() 
+        {
+            return new CustomActionResult();
         }
 
         public IActionResult Privacy()
