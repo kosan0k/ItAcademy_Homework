@@ -17,7 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IT_AcademyHomework.Tests", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson5", "Lesson5", "{6CD6F587-8F4A-48A8-962B-8FC71876A05E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5_Homework", "Lesson5\Lesson5_Homework\Lesson5_Homework.csproj", "{29171474-291C-43E8-A75C-55B1068394BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5_Homework", "Lesson5\Lesson5_Homework\Lesson5_Homework.csproj", "{29171474-291C-43E8-A75C-55B1068394BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson6", "Lesson6", "{3F7669C5-B562-4445-B5A1-BD579E7BF59E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6_Homework", "Lesson6\Lesson6_Homework\Lesson6_Homework.csproj", "{3DB39D51-7624-4B37-B050-1346864558EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{29171474-291C-43E8-A75C-55B1068394BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29171474-291C-43E8-A75C-55B1068394BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29171474-291C-43E8-A75C-55B1068394BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB39D51-7624-4B37-B050-1346864558EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB39D51-7624-4B37-B050-1346864558EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB39D51-7624-4B37-B050-1346864558EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB39D51-7624-4B37-B050-1346864558EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{5A302B8A-B14E-45E2-9FAB-061B93E19088} = {37628CF9-B1C1-489C-8728-DD8F61BDC73A}
 		{4FFC5627-F8F2-40F1-8B13-D62D3116FDFF} = {61FB91EB-DD24-4836-8340-E13DC1572504}
 		{29171474-291C-43E8-A75C-55B1068394BE} = {6CD6F587-8F4A-48A8-962B-8FC71876A05E}
+		{3DB39D51-7624-4B37-B050-1346864558EC} = {3F7669C5-B562-4445-B5A1-BD579E7BF59E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {027E78F0-1C16-4853-A97F-4C86A6FA08D6}
