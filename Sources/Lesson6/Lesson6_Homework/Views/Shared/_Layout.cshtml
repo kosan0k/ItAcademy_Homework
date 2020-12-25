@@ -26,16 +26,21 @@
                         <label class="d-block nav-item-padding">|</label>
                     </li>
                     <li class="nav-item">
-                        <a class="link-blue d-block nav-item-padding" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                        <a class="link-blue d-block nav-item-padding" asp-area="" asp-controller="Home" asp-action="About">About</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-auto align-self-start">
+                @RenderSection("ProductCategories", false)
+            </div>
+            <main role="main" class="pb-3 mr-1 col text-center border border-dark border-rounded border-bolt">
+                @RenderBody()
+            </main>
+        </div>
     </div>
 
     <footer class="text-muted fixed-bottom footer">

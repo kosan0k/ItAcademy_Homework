@@ -49,6 +49,10 @@ h1 {
     border: .5rem solid;
 }
 
+.col-empty, .col:empty, [class^=col-]:empty {
+    display: none;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
