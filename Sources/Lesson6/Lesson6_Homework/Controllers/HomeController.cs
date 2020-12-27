@@ -1,4 +1,5 @@
 ﻿using Lesson6_Homework.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,6 +14,8 @@ namespace Lesson6_Homework.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private const string _usernameKey = "username";
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -21,6 +24,29 @@ namespace Lesson6_Homework.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Login() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(string username, string password) 
+        {
+            IActionResult result = null;
+            if (!string.IsNullOrEmpty(username))
+            {
+                HttpContext.Session.SetString(_usernameKey, username);
+                result = RedirectToAction(nameof(this.Index));
+            }
+            else 
+            {
+                result = View();
+            }
+
+            return result;
         }
 
         public IActionResult Privacy()
