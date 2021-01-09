@@ -21,7 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson5_Homework", "Lesson5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson6", "Lesson6", "{3F7669C5-B562-4445-B5A1-BD579E7BF59E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson6_Homework", "Lesson6\Lesson6_Homework\Lesson6_Homework.csproj", "{3DB39D51-7624-4B37-B050-1346864558EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson6_Homework", "Lesson6\Lesson6_Homework\Lesson6_Homework.csproj", "{3DB39D51-7624-4B37-B050-1346864558EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{CD779A8A-4B4F-44C8-B267-623AB35D38B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "It_AcademyHomework.Repository.Common", "Repository\It_AcademyHomework.Repository.Common\It_AcademyHomework.Repository.Common.csproj", "{73E4D369-6113-4041-AC43-63B98AB68427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "It_AcademyHomework.Repository.AdoNet", "Repository\It_AcademiHomework.Repository.AdoNet\It_AcademyHomework.Repository.AdoNet.csproj", "{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +55,14 @@ Global
 		{3DB39D51-7624-4B37-B050-1346864558EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DB39D51-7624-4B37-B050-1346864558EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DB39D51-7624-4B37-B050-1346864558EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73E4D369-6113-4041-AC43-63B98AB68427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73E4D369-6113-4041-AC43-63B98AB68427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73E4D369-6113-4041-AC43-63B98AB68427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73E4D369-6113-4041-AC43-63B98AB68427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +73,8 @@ Global
 		{4FFC5627-F8F2-40F1-8B13-D62D3116FDFF} = {61FB91EB-DD24-4836-8340-E13DC1572504}
 		{29171474-291C-43E8-A75C-55B1068394BE} = {6CD6F587-8F4A-48A8-962B-8FC71876A05E}
 		{3DB39D51-7624-4B37-B050-1346864558EC} = {3F7669C5-B562-4445-B5A1-BD579E7BF59E}
+		{73E4D369-6113-4041-AC43-63B98AB68427} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
+		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {027E78F0-1C16-4853-A97F-4C86A6FA08D6}

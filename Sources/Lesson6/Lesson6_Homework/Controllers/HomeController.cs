@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using It_AcademyHomework.Repository.AdoNet;
 
 namespace Lesson6_Homework.Controllers
 {
@@ -23,6 +24,12 @@ namespace Lesson6_Homework.Controllers
 
         public IActionResult Index()
         {
+            var connectionString =
+                @"Server = .\SQLExpress; Database = HomeworkDb; Trusted_Connection = True; MultipleActiveResultSets = true;";
+            var lol = new SqlAdoNetGenericRepository<Catalog>(connectionString);
+
+            var result = lol.AddAsync(new Catalog() {Name = "Nameasdasd"}).GetAwaiter().GetResult();
+
             return View();
         }
 

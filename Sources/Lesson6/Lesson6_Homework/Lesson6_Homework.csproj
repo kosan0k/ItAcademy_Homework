@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repository\It_AcademiHomework.Repository.AdoNet\It_AcademyHomework.Repository.AdoNet.csproj" />
+  </ItemGroup>
+
 </Project>
