@@ -29,7 +29,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "It_AcademyHomework.Reposito
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "It_AcademyHomework.Repository.AdoNet", "Repository\It_AcademiHomework.Repository.AdoNet\It_AcademyHomework.Repository.AdoNet.csproj", "{956F1E41-5C6B-4C77-A411-FF6DCA2A3121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "It_AcademyHomework.Repository.EntityFramework", "Repository\It_AcademyHomework.Repository.EntityFramework\It_AcademyHomework.Repository.EntityFramework.csproj", "{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "It_AcademyHomework.Repository.EntityFramework", "Repository\It_AcademyHomework.Repository.EntityFramework\It_AcademyHomework.Repository.EntityFramework.csproj", "{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson7", "Lesson7", "{CC3B140F-400C-455E-A2A9-D73924AE04C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson7_Homework", "Lesson7\Lesson7_Homework\Lesson7_Homework.csproj", "{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,10 @@ Global
 		{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +90,7 @@ Global
 		{73E4D369-6113-4041-AC43-63B98AB68427} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
 		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
 		{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
+		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B} = {CC3B140F-400C-455E-A2A9-D73924AE04C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {027E78F0-1C16-4853-A97F-4C86A6FA08D6}
