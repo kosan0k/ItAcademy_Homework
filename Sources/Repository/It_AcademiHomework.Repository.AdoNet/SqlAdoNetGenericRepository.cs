@@ -7,10 +7,11 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using It_AcademyHomework.Repository.Common.Models;
 
 namespace It_AcademyHomework.Repository.AdoNet
 {
-    public class SqlAdoNetGenericRepository<T> : IGenericRepository<T> where T : class
+    public class SqlAdoNetGenericRepository<T> : IGenericRepository<T> where T : class, IEntity
     {
         private string _dbConnectionString;
         private IReadOnlyDictionary<string, string> _propertyDefinitions;
@@ -115,11 +116,6 @@ namespace It_AcademyHomework.Repository.AdoNet
         }
 
         public Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> queryFilter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string[] includeProperties = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

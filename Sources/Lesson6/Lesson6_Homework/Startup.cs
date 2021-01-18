@@ -8,6 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using It_AcademyHomework.Repository.Common;
+using It_AcademyHomework.Repository.EntityFramework;
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using Microsoft.AspNetCore.Http;
+using React.AspNet;
 
 namespace Lesson6_Homework
 {
@@ -24,8 +30,15 @@ namespace Lesson6_Homework
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddReact();
+            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName).AddChakraCore();
             services.AddDistributedMemoryCache();
             services.AddSession();
+
+            var dbContext = new InMemoryRepositoryContext();
+            services.AddSingleton(x => new EfGenericRepository<Good>(dbContext) as IGenericRepository<Good>);
+            services.AddSingleton(x => new EfGenericRepository<Catalog>(dbContext) as IGenericRepository<Catalog>);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +56,7 @@ namespace Lesson6_Homework
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseReact(config => { });
 
             app.UseRouting();
 

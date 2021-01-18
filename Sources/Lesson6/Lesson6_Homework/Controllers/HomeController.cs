@@ -2,12 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using It_AcademyHomework.Repository.AdoNet;
+using It_AcademyHomework.Repository.Common;
+using System;
 
 namespace Lesson6_Homework.Controllers
 {
@@ -15,21 +12,20 @@ namespace Lesson6_Homework.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private readonly IGenericRepository<Good> _goods;
+        private readonly IGenericRepository<Catalog> _catalogs;
+
         private const string _usernameKey = "username";
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IGenericRepository<Good> goods, IGenericRepository<Catalog> catalogs)
         {
+            _goods = goods ?? throw new ArgumentNullException(nameof(goods));
+            _catalogs = catalogs ?? throw new ArgumentNullException(nameof(catalogs));
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            var connectionString =
-                @"Server = .\SQLExpress; Database = HomeworkDb; Trusted_Connection = True; MultipleActiveResultSets = true;";
-            var lol = new SqlAdoNetGenericRepository<Catalog>(connectionString);
-
-            var result = lol.AddAsync(new Catalog() {Name = "Nameasdasd"}).GetAwaiter().GetResult();
-
             return View();
         }
 

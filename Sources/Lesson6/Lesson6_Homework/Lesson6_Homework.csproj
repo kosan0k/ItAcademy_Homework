@@ -5,11 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore" Version="3.9.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x64" Version="3.9.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.ChakraCore.Native.win-x86" Version="3.9.1" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" Version="3.3.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
+    <PackageReference Include="React.AspNet" Version="5.2.11" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Repository\It_AcademiHomework.Repository.AdoNet\It_AcademyHomework.Repository.AdoNet.csproj" />
+    <ProjectReference Include="..\..\Repository\It_AcademyHomework.Repository.EntityFramework\It_AcademyHomework.Repository.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>
