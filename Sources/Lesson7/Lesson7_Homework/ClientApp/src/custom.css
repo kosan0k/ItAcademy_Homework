@@ -12,3 +12,12 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  height: 3em;
+  width: 10em;
+}
