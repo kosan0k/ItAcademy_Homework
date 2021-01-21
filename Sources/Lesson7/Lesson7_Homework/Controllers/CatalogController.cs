@@ -11,18 +11,18 @@ namespace Lesson7_Homework.Controllers
     [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
-        public static readonly Catalog[] _catalogs = new[]
+        private readonly IGenericRepository<Catalog> _catalogRepository;
+
+        public CatalogController(IGenericRepository<Catalog> catalogRepository)
         {
-            new Catalog() { Name = "Phones"},
-            new Catalog() { Name = "Notebooks"},
-            new Catalog() { Name = "SmartWatches"},
-            new Catalog() { Name = "Other"}
-        };
+            _catalogRepository = catalogRepository ?? throw new ArgumentNullException(nameof(catalogRepository));
+        }
 
         [HttpGet]
-        public IEnumerable<Catalog> Get()
+        public async Task<IEnumerable<Catalog>> Get()
         {
-            return _catalogs.ToArray();
+            var catalogs = await _catalogRepository.GetAsync();
+            return catalogs;
         }
     }
 }

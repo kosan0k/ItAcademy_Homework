@@ -1,3 +1,5 @@
+using It_AcademyHomework.Repository.Common;
+using It_AcademyHomework.Repository.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,6 +24,11 @@ namespace Lesson7_Homework
         {
 
             services.AddControllersWithViews();
+
+            var inMemoryContext = new InMemoryRepositoryContext();
+            services.AddSingleton<CommonRepositoryContext>(new InMemoryRepositoryContext());
+            services.AddSingleton<IGenericRepository<Good>>(new EfGenericRepository<Good>(inMemoryContext));
+            services.AddSingleton<IGenericRepository<Catalog>>(new EfGenericRepository<Catalog>(inMemoryContext));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

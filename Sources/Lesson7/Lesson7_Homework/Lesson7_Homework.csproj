@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Repository\It_AcademyHomework.Repository.Common\It_AcademyHomework.Repository.Common.csproj" />
+    <ProjectReference Include="..\..\Repository\It_AcademyHomework.Repository.EntityFramework\It_AcademyHomework.Repository.EntityFramework.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

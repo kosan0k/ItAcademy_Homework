@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using It_AcademyHomework.Repository.Common;
 
 namespace Lesson7_Homework.Controllers
@@ -8,20 +11,22 @@ namespace Lesson7_Homework.Controllers
     [Route("[controller]")]
     public class CatalogItemController : ControllerBase
     {
-        private static IDictionary<string, IEnumerable<Good>> _catalogsWithItems =
-            new Dictionary<string, IEnumerable<Good>>()
-            {
-                {"Phones", new List<Good>() { new Good() { Name = "1", Price = "230$"} }},
-                {"Notebooks", new List<Good>() { new Good() { Name = "2", Price = "250$"}, new Good() { Name = "22", Price = "210$"} }},
-                {"SmartWatches", new List<Good>() { new Good() { Name = "3", Price = "230$"} }},
-                {"Other", new List<Good>() { new Good() { Name = "4", Price = "230$"} }},
-            };
+        private readonly IGenericRepository<Good> _goodsRepository;
+        private readonly IGenericRepository<Catalog> _catalogRepository;
+
+        public CatalogItemController(IGenericRepository<Good> goodsRepository, IGenericRepository<Catalog> catalogRepository)
+        {
+            _goodsRepository = goodsRepository ?? throw new ArgumentNullException(nameof(goodsRepository));
+            _catalogRepository = catalogRepository ?? throw new ArgumentNullException(nameof(catalogRepository));
+        }
 
         [HttpPost]
-        public IEnumerable<Good> Get([FromBody] Catalog catalog)
+        public async Task<IEnumerable<Good>> Get([FromBody] Catalog catalog)
         {
-            _catalogsWithItems.TryGetValue(catalog.Name, out var items);
-            return items;
+            var catalogFromDb = (await _catalogRepository.GetAsync(c => c.Name.Equals(catalog.Name))).FirstOrDefault();
+            return catalogFromDb != null
+                ? await _goodsRepository.GetAsync(g => g.CatalogId == catalogFromDb.Id)
+                : new List<Good>();
         }
     }
 }
