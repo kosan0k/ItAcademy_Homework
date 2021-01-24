@@ -33,7 +33,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "It_AcademyHomework.Reposito
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson7", "Lesson7", "{CC3B140F-400C-455E-A2A9-D73924AE04C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson7_Homework", "Lesson7\Lesson7_Homework\Lesson7_Homework.csproj", "{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson7_Homework", "Lesson7\Lesson7_Homework\Lesson7_Homework.csproj", "{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JwtExample", "JwtExample", "{963F897E-524F-4A72-872E-D4A30802BCAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "It_AcademyHomework.JwtExample", "JwtExample\It_AcademyHomework.JwtExample\It_AcademyHomework.JwtExample.csproj", "{BE0B217B-369C-4839-AEA2-E7211207557D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{6BA3194E-40E5-449F-BA81-FB6EAFBF776F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "It_AcademyHomework.Authentication", "Authentication\It_AcademyHomework.Authentication\It_AcademyHomework.Authentication.csproj", "{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +85,14 @@ Global
 		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE0B217B-369C-4839-AEA2-E7211207557D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0B217B-369C-4839-AEA2-E7211207557D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0B217B-369C-4839-AEA2-E7211207557D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0B217B-369C-4839-AEA2-E7211207557D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +107,8 @@ Global
 		{956F1E41-5C6B-4C77-A411-FF6DCA2A3121} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
 		{37AEE069-2CCC-4BAA-9069-0C1788FDB1D9} = {CD779A8A-4B4F-44C8-B267-623AB35D38B9}
 		{3E72F2A3-BA67-4A10-9F09-9F2A0A4F074B} = {CC3B140F-400C-455E-A2A9-D73924AE04C1}
+		{BE0B217B-369C-4839-AEA2-E7211207557D} = {963F897E-524F-4A72-872E-D4A30802BCAD}
+		{2C44C7D3-BC92-4EE1-8109-8A60DFEE5B11} = {6BA3194E-40E5-449F-BA81-FB6EAFBF776F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {027E78F0-1C16-4853-A97F-4C86A6FA08D6}
